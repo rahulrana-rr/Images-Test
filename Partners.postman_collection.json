@@ -1,0 +1,763 @@
+{
+	"info": {
+		"_postman_id": "91e383f4-a974-4ad0-9bfd-d467e419566d",
+		"name": "Partners",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44533673",
+		"_collection_link": "https://rahulrana-6465920.postman.co/workspace/Rahul-Rana's-Workspace~ae289fc9-90aa-4fd2-8983-0a1cf7897980/collection/44533673-91e383f4-a974-4ad0-9bfd-d467e419566d?action=share&source=collection_link&creator=44533673"
+	},
+	"item": [
+		{
+			"name": "Workflows",
+			"item": [
+				{
+					"name": "Input Workflow",
+					"item": [
+						{
+							"name": "input-workflow/ create",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n            \"name\": \"rahulrana\",\n            \"enterpriseId\": \"TaD1VC1Ko\",\n            \"teamId\": \"e85c9c307\",\n            \"userId\": \"test\",\n            \"partnerId\": \"681bfc2bcec5dd75ec0ab6cc\",\n            \"dealerId\": \"dealer456\",\n            \"isActive\": true,\n            \"processingConfigs\": {\n                \"backgroundId\": \"bg001\",\n                \"numberplateId\": \"np001\",\n                \"bannerId\": \"banner001\",\n                \"videoId\": \"video00\",\n                \"voiceId\": \"voice001\",\n                \"musicId\": \"music001\",\n                \"aiHotspot\": true\n            },\n            \"thresholdCounts\": {\n                \"newCars\": 0,\n                \"usedCars\": 0\n            },\n            \"productOptions\": {\n                \"spin\": false,\n                \"catalog\": false,\n                \"featureVideo\": false\n            },\n            \"rules\": []\n        }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://beta-api.spyne.xyz/partner/input-workflow",
+									"protocol": "https",
+									"host": [
+										"beta-api",
+										"spyne",
+										"xyz"
+									],
+									"path": [
+										"partner",
+										"input-workflow"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "input-workflow/ get",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/partner/input-workflow?enterpriseId=e2da4572c",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"partner",
+										"input-workflow"
+									],
+									"query": [
+										{
+											"key": "enterpriseId",
+											"value": "e2da4572c"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "input-workflow/:id get",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://beta-api.spyne.xyz/partner/input-workflow/:id",
+									"protocol": "https",
+									"host": [
+										"beta-api",
+										"spyne",
+										"xyz"
+									],
+									"path": [
+										"partner",
+										"input-workflow",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "682273ba010660a03b7f90b1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "input-workflow/ put",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer YOUR_ACCESS_TOKEN"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"_id\": \"681c85795a89b52f864ea1e6\",\n  \"name\": \"test\",\n  \"enterpriseId\": \"e2da4572c\",\n  \"teamId\": \"team789s\",\n  \"userId\": \"user123\",\n  \"partnerId\": \"partner123sadf\",\n  \"dealerId\": \"dealer4566a\",\n  \"isActive\": true,\n  \"processingConfigs\": {\n    \"backgroundId\": \"bg001\",\n    \"numberplateId\": \"np001\",\n    \"bannerId\": \"banner001\",\n    \"videoId\": \"video00\",\n    \"voiceId\": \"voice001\",\n    \"musicId\": \"music001\",\n    \"aiHotspot\": true\n  },\n  \"thresholdCounts\": {\n    \"newCars\": 0,\n    \"usedCars\": 0\n  },\n  \"productOptions\": {\n    \"spin\": false,\n    \"catalog\": false,\n    \"featureVideo\": false\n  },\n  \"rules\": [\n    {\n      \"_id\": \"681c857a5a89b52f864ea1e8\",\n      \"input_workflow_id\": \"681c85795a89b52f864ea1e6\",\n      \"processingConfigs\": {\n        \"backgroundId\": \"bg002\",\n        \"numberplateId\": \"np002\",\n        \"bannerId\": \"banner002\",\n        \"videoId\": \"video002\",\n        \"voiceId\": \"voice002\",\n        \"musicId\": \"music002\",\n        \"aiHotspot\": false\n      },\n      \"conditionGroups\": [\n        {\n          \"_id\": \"681c857a5a89b52f864ea1ea\",\n          \"rule_id\": \"681c857a5a89b52f864ea1e8\",\n          \"operator\": \"AND\",\n          \"conditions\": [\n            {\n              \"_id\": \"681c857b5a89b52f864ea1ec\",\n              \"condition_group_id\": \"681c857a5a89b52f864ea1ea\",\n              \"column_name\": \"model\",\n              \"condition\": \"equals\",\n              \"value\": \"Civic\"\n            },\n            {\n              \"_id\": \"681c857b5a89b52f864ea1ee\",\n              \"condition_group_id\": \"681c857a5a89b52f864ea1ea\",\n              \"column_name\": \"year\",\n              \"condition\": \"equals\",\n              \"value\": \"2023\"\n            }\n          ]\n        }\n      ]\n    },\n    {\n      \"_id\": \"681c857b5a89b52f864ea1f0\",\n      \"input_workflow_id\": \"681c85795a89b52f864ea1e6\",\n      \"processingConfigs\": {\n        \"backgroundId\": \"bg003\",\n        \"numberplateId\": \"np003\",\n        \"bannerId\": \"banner003\",\n        \"videoId\": \"video003\",\n        \"voiceId\": \"voice003\",\n        \"musicId\": \"music003\",\n        \"aiHotspot\": true\n      },\n      \"conditionGroups\": [\n        {\n          \"_id\": \"681c857b5a89b52f864ea1f2\",\n          \"rule_id\": \"681c857b5a89b52f864ea1f0\",\n          \"operator\": \"OR\",\n          \"conditions\": [\n            {\n              \"_id\": \"681c857c5a89b52f864ea1f4\",\n              \"condition_group_id\": \"681c857b5a89b52f864ea1f2\",\n              \"column_name\": \"color\",\n              \"condition\": \"contains\",\n              \"value\": \"Red\"\n            },\n            {\n              \"_id\": \"681c857c5a89b52f864ea1f6\",\n              \"condition_group_id\": \"681c857b5a89b52f864ea1f2\",\n              \"column_name\": \"color\",\n              \"condition\": \"contains\",\n              \"value\": \"Blue\"\n            }\n          ]\n        },\n        {\n          \"_id\": \"681c857c5a89b52f864ea1f8\",\n          \"rule_id\": \"681c857b5a89b52f864ea1f0\",\n          \"operator\": \"AND\",\n          \"conditions\": [\n            {\n              \"_id\": \"681c857c5a89b52f864ea1fa\",\n              \"condition_group_id\": \"681c857c5a89b52f864ea1f8\",\n              \"column_name\": \"mileage\",\n              \"condition\": \"equals\",\n              \"value\": \"0\"\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://beta-api.spyne.xyz/partner/input-workflow/681c85795a89b52f864ea1e6",
+									"protocol": "https",
+									"host": [
+										"beta-api",
+										"spyne",
+										"xyz"
+									],
+									"path": [
+										"partner",
+										"input-workflow",
+										"681c85795a89b52f864ea1e6"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Output Workflow",
+					"item": [
+						{
+							"name": "output-workflow/ get",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer YOUR_ACCESS_TOKEN"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://beta-api.spyne.xyz/partner/output-workflow?enterpriseId=e2da4572c",
+									"protocol": "https",
+									"host": [
+										"beta-api",
+										"spyne",
+										"xyz"
+									],
+									"path": [
+										"partner",
+										"output-workflow"
+									],
+									"query": [
+										{
+											"key": "enterpriseId",
+											"value": "e2da4572c"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "output-workflow/ put",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer YOUR_ACCESS_TOKEN"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n            \"_id\": \"681d457243e1953a447d9eba\",\n            \"name\": \"Example Partner Output \",\n            \"teamId\": \"team123456\",\n            \"enterpriseId\": \"e2da4572c\",\n            \"dealerId\": \"dealer456\",\n            \"partnerId\": \"681bfc2bcec5dd75ec0ab6cc\",\n            \"aiDonePush\": false,\n            \"pushRaw\": false,\n            \"ftpConfig\": {\n                \"username\": \"ftpuser\",\n                \"password\": \"ftppassword\"\n            },\n            \"inventoryFilters\": {\n                \"includeUsedCars\": true,\n                \"includeNewCars\": true\n            },\n            \"createdAt\": \"2025-05-08T23:59:46.691Z\",\n            \"updatedAt\": \"2025-05-08T23:59:46.691Z\",\n            \"__v\": 0\n        }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://beta-api.spyne.xyz/partner/output-workflow/681d457243e1953a447d9eba",
+									"protocol": "https",
+									"host": [
+										"beta-api",
+										"spyne",
+										"xyz"
+									],
+									"path": [
+										"partner",
+										"output-workflow",
+										"681d457243e1953a447d9eba"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "output-workflow/:id get",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer YOUR_ACCESS_TOKEN"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://beta-api.spyne.xyz/partner/output-workflow/:id",
+									"protocol": "https",
+									"host": [
+										"beta-api",
+										"spyne",
+										"xyz"
+									],
+									"path": [
+										"partner",
+										"output-workflow",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "output-workflow/ create",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer YOUR_ACCESS_TOKEN"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Example Partner Output Workflow\",\n    \"teamId\": \"team123456\",\n    \"enterpriseId\": \"enterprise789\",\n    \"dealerId\": \"dealer456\",\n    \"partnerId\": \"681bfc2bcec5dd75ec0ab6cc\",\n    \"aiDonePush\": true,\n    \"pushRaw\": false,\n    \"ftpConfig\": {\n      \"username\": \"ftpuser\",\n      \"password\": \"ftppassword\"\n    },\n    \"inventoryFilters\": {\n      \"includeUsedCars\": true,\n      \"includeNewCars\": true\n    }\n  }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://beta-api.spyne.xyz/partner/output-workflow",
+									"protocol": "https",
+									"host": [
+										"beta-api",
+										"spyne",
+										"xyz"
+									],
+									"path": [
+										"partner",
+										"output-workflow"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "partner-get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer YOUR_ACCESS_TOKEN"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localPartner}}/partner?name=Test Partner 2",
+					"host": [
+						"{{localPartner}}"
+					],
+					"path": [
+						"partner"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Test Partner 2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Partner V2",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer YOUR_ACCESS_TOKEN"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Test Partner [RR-1]\",\n    \"ftpConfigs\": {\n        \"inputSftpConfigs\": {\n            \"path\": \"/input\",\n            \"port\": 22,\n            \"secure\": true,\n            \"hostname\": \"sftp.example.com\",\n            \"password\": \"your-password\",\n            \"protocol\": \"SFTP\",\n            \"username\": \"sftpuser\"\n        },\n        \"outputSftpConfigs\": {\n            \"path\": \"/output\",\n            \"port\": 22,\n            \"secure\": true,\n            \"hostname\": \"sftp.example.com\",\n            \"password\": \"your-password\",\n            \"protocol\": \"SFTP\",\n            \"username\": \"sftpuser\"\n        }\n    },\n    \"isActive\": true,\n    \"fileFormat\": {\n        \"inputFileFormat\": {\n            \"headerKeysMapping\": {\n                \"vin\": \"VIN\",\n                \"make\": \"MAKE\",\n                \"model\": \"MODEL\",\n                \"year\": \"YEAR\"\n            },\n            \"imageDelimiter\": \",\",\n            \"fileDelimiter\": \",\"\n        },\n        \"outputFileFormat\": {\n            \"headerKeysMapping\": {\n                \"vin\": \"VIN_NUMBER\",\n                \"make\": \"VEHICLE_MAKE\",\n                \"model\": \"VEHICLE_MODEL\",\n                \"year\": \"VEHICLE_YEAR\"\n            },\n            \"fileFormat\": \"csv\"\n        }\n    },\n    \"logo\": \"https://example.com/partner-logo.png\",\n    \"pushConfigs\": {\n        \"pushCombineFile\": false,\n        \"dealerLevelFtpConfig\": false\n    },\n    \"fetchInventory\": false,\n    \"stockAPI\": {\n        \"method\": \"GET\",\n        \"url\": \"https://api.example.com/inventory\"\n    },\n    \"inventoryMapping\": {\n        \"vehicle.bodyType\": \"vinDetails.vehicleSnap.style.value\",\n        \"vehicle.standard.bodyType\": \"vinDetails.vehicleSnap.style.value\",\n        \"vehicle.fuelType\": \"vinDetails.vehicleSnap.fuel.value\",\n        \"vehicle.standard.fuelType\": \"vinDetails.vehicleSnap.fuel.value\",\n        \"vehicle.transmissionType\": \"vinDetails.vehicleSnap.transmissionShort.value\",\n        \"vehicle.drivetrain\": \"vinDetails.vehicleSnap.driveline.value\",\n        \"vehicle.engineCapacityCC\": \"vinDetails.vehicleSnap.cc.value\",\n        \"vehicle.fuelCapacityLitres\": \"vinDetails.engineTransmission.fuelTank.value\",\n        \"vehicle.lengthMM\": \"vinDetails.interiorExteriorDetails.length.value\",\n        \"vehicle.heightMM\": \"vinDetails.interiorExteriorDetails.height.value\",\n        \"vehicle.widthMM\": \"vinDetails.interiorExteriorDetails.width.value\",\n        \"vehicle.insuranceGroup\": \"vinDetails.vehicleSnap.insurance.value\",\n        \"vehicle.insuranceSecurityCode\": \"vinDetails.vehicleSnap.insurance.value\",\n        \"vehicle.colour\": \"vinDetails.vehicleSnap.exteriorColor.value\",\n        \"vehicle.ownershipCondition\": \"vinDetails.vehicleSnap.condition.value\",\n        \"vehicle.make\": \"vinDetails.vehicleSnap.make.value\",\n        \"vehicle.standard.make\": \"vinDetails.vehicleSnap.make.value\",\n        \"vehicle.model\": \"vinDetails.vehicleSnap.model.value\",\n        \"vehicle.standard.model\": \"vinDetails.vehicleSnap.model.value\",\n        \"vehicle.registration\": \"vinDetails.vehicleSnap.registrationNumber.value\",\n        \"vehicle.vin\": \"vinDetails.vehicleSnap.vin.value\",\n        \"vehicle.standard.trim\": \"vinDetails.vehicleSnap.trim.value\",\n        \"vehicle.odometerReadingMiles\": \"vinDetails.vehicleSnap.mileage.value\",\n        \"vehicle.yearOfManufacture\": \"vinDetails.vehicleSnap.year.value\",\n        \"vehicle.wheelbaseType\": \"vinDetails.interiorExteriorDetails.wheelbase.value\",\n        \"vehicle.owners\": \"vinDetails.vehicleSnap.owner.value\",\n        \"vehicle.advert.forecourtPrice.amountGBP\": \"vinDetails.vehicleSnap.msrp.value\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/partner/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"partner",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Partner V1",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer YOUR_ACCESS_TOKEN"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Test Partner [RR]\",\n    \"ftpConfigs\": {\n        \"inputSftpConfigs\": {\n            \"path\": \"/input\",\n            \"port\": 22,\n            \"secure\": true,\n            \"hostname\": \"sftp.example.com\",\n            \"password\": \"your-password\",\n            \"protocol\": \"SFTP\",\n            \"username\": \"sftpuser\"\n        },\n        \"outputSftpConfigs\": {\n            \"path\": \"/output\",\n            \"port\": 22,\n            \"secure\": true,\n            \"hostname\": \"sftp.example.com\",\n            \"password\": \"your-password\",\n            \"protocol\": \"SFTP\",\n            \"username\": \"sftpuser\"\n        }\n    },\n    \"isActive\": true,\n    \"fileFormat\": {\n        \"inputFileFormat\": {\n            \"headerKeysMapping\": {\n                \"vin\": \"VIN\",\n                \"make\": \"MAKE\",\n                \"model\": \"MODEL\",\n                \"year\": \"YEAR\"\n            },\n            \"imageDelimiter\": \",\",\n            \"fileDelimiter\": \",\"\n        },\n        \"outputFileFormat\": {\n            \"headerKeysMapping\": {\n                \"vin\": \"VIN_NUMBER\",\n                \"make\": \"VEHICLE_MAKE\",\n                \"model\": \"VEHICLE_MODEL\",\n                \"year\": \"VEHICLE_YEAR\"\n            },\n            \"fileFormat\": \"csv\"\n        }\n    },\n    \"logo\": \"https://example.com/partner-logo.png\",\n    \"pushConfigs\": {\n        \"pushCombineFile\": false,\n        \"dealerLevelFtpConfig\": false\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/partner/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"partner",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.spyne.ai/partner",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					},
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhdXRoS2V5IjoiZmIyODNhNDItM2IxOS00ZTM2LTgxZTUtYTM5ZDIzNWFiMzgxIiwiZGV2aWNlSWQiOiI3NTZjOGE4ZTE4NmFkZWUzZDg5NzMwM2ZkYTY4ZGI2NCIsImVudGVycHJpc2VfaWQiOiJjYTNjOGU2ZTciLCJ0ZWFtX2lkIjoiODZmYzQwMmFkZCJ9"
+					},
+					{
+						"key": "Referer",
+						"value": "https://console.spyne.ai/"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Chromium\";v=\"136\", \"Google Chrome\";v=\"136\", \"Not.A/Brand\";v=\"99\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					}
+				],
+				"url": {
+					"raw": "https://api.spyne.ai/partner",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spyne",
+						"ai"
+					],
+					"path": [
+						"partner"
+					]
+				},
+				"description": "Generated from cURL: curl 'https://api.spyne.ai/partner' \\\n  -H 'sec-ch-ua-platform: \"macOS\"' \\\n  -H 'authorization: Bearer eyJhdXRoS2V5IjoiZmIyODNhNDItM2IxOS00ZTM2LTgxZTUtYTM5ZDIzNWFiMzgxIiwiZGV2aWNlSWQiOiI3NTZjOGE4ZTE4NmFkZWUzZDg5NzMwM2ZkYTY4ZGI2NCIsImVudGVycHJpc2VfaWQiOiJjYTNjOGU2ZTciLCJ0ZWFtX2lkIjoiODZmYzQwMmFkZCJ9' \\\n  -H 'Referer: https://console.spyne.ai/' \\\n  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36' \\\n  -H 'Accept: application/json, text/plain, */*' \\\n  -H 'sec-ch-ua: \"Chromium\";v=\"136\", \"Google Chrome\";v=\"136\", \"Not.A/Brand\";v=\"99\"' \\\n  -H 'sec-ch-ua-mobile: ?0'\n\n\n\n\n\n\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Partner Inventory Mapping",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					},
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhdXRoS2V5IjoiZmIyODNhNDItM2IxOS00ZTM2LTgxZTUtYTM5ZDIzNWFiMzgxIiwiZGV2aWNlSWQiOiI3NTZjOGE4ZTE4NmFkZWUzZDg5NzMwM2ZkYTY4ZGI2NCIsImVudGVycHJpc2VfaWQiOiJjYTNjOGU2ZTciLCJ0ZWFtX2lkIjoiODZmYzQwMmFkZCJ9"
+					},
+					{
+						"key": "Referer",
+						"value": "https://console.spyne.ai/"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Chromium\";v=\"136\", \"Google Chrome\";v=\"136\", \"Not.A/Brand\";v=\"99\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "X-Request-ID",
+						"value": "72b77771-72ab-4b20-99a4-209ffe676406",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"8a469dd0985beb0c01985ef2dc471f35\",\n    \"time\": \"2025-07-31T05:30:01.677Z\",\n    \"type\": \"STOCK_UPDATE\",\n    \"data\": {\n        \"advertiser\": {\n            \"advertiserId\": \"5761\"\n        },\n        \"metadata\": {\n            \"stockId\": \"8a469dd0985beb0c01985ef2dc471f35\",\n            \"searchId\": \"202507319446934\",\n            \"versionNumber\": 3,\n            \"lifecycleState\": \"FORECOURT\",\n            \"externalStockId\": \"8a42869d98567e6001985b134393720f\",\n            \"lastUpdated\": \"2025-07-31T05:30:01.677Z\",\n            \"lastUpdatedByAdvertiser\": \"2025-07-31T05:27:11.132Z\",\n            \"dateOnForecourt\": \"2025-07-31\"\n        },\n        \"vehicle\": {\n            \"vehicleType\": \"Car\",\n            \"bodyType\": \"SUV\",\n            \"fuelType\": \"Petrol\",\n            \"transmissionType\": \"Automatic\",\n            \"drivetrain\": \"Front Wheel Drive\",\n            \"seats\": 5,\n            \"doors\": 5,\n            \"cylinders\": 3,\n            \"valves\": 12,\n            \"co2EmissionGPKM\": 142,\n            \"topSpeedMPH\": 121,\n            \"zeroToOneHundredKMPHSeconds\": 9.2,\n            \"badgeEngineSizeLitres\": 1.2,\n            \"engineCapacityCC\": 1199,\n            \"enginePowerBHP\": 128,\n            \"fuelCapacityLitres\": 45,\n            \"fuelEconomyNEDCCombinedMPG\": 47.3,\n            \"fuelEconomyWLTPCombinedMPG\": 47.3,\n            \"lengthMM\": 4155,\n            \"heightMM\": 1637,\n            \"widthMM\": 1765,\n            \"minimumKerbWeightKG\": 1205,\n            \"bootSpaceSeatsUpLitres\": 410,\n            \"bootSpaceSeatsDownLitres\": 1289,\n            \"insuranceGroup\": \"17\",\n            \"insuranceSecurityCode\": \"E\",\n            \"colour\": \"Khaki\",\n            \"serviceHistory\": \"Full service history\",\n            \"plate\": \"22\",\n            \"ownershipCondition\": \"Used\",\n            \"make\": \"Citroen\",\n            \"model\": \"C3 Aircross\",\n            \"registration\": \"BF22WRZ\",\n            \"vin\": \"VF72RHNS1N4214215\",\n            \"derivative\": \"1.2 PureTech Shine Plus EAT6 Euro 6 (s/s) 5dr\",\n            \"derivativeId\": \"e68e62e97b154009a0523c2adaf0835d\",\n            \"standard\": {\n                \"make\": \"Citroen\",\n                \"model\": \"C3 Aircross\",\n                \"generation\": \"SUV (2021 - 2024)\",\n                \"derivative\": \"1.2 PureTech Shine Plus EAT6 Euro 6 (s/s) 5dr\",\n                \"trim\": \"Shine Plus\",\n                \"bodyType\": \"SUV\",\n                \"fuelType\": \"Petrol\",\n                \"transmissionType\": \"Automatic\",\n                \"drivetrain\": \"Front Wheel Drive\",\n                \"colour\": \"Grey\",\n                \"cabType\": \"Unlisted\"\n            },\n            \"odometerReadingMiles\": 17338,\n            \"yearOfManufacture\": 2022,\n            \"firstRegistrationDate\": \"2022-06-30\",\n            \"driverPosition\": \"Unlisted\",\n            \"exDemo\": false,\n            \"cabType\": \"Unlisted\",\n            \"wheelbaseType\": \"STD\",\n            \"emissionClass\": \"Euro 6\",\n            \"owners\": 1,\n            \"generation\": \"SUV (2021 - 2024)\",\n            \"engineTorqueNM\": 230,\n            \"vehicleExciseDutyWithoutSupplementGBP\": 195,\n            \"engineNumber\": \"Z1AE0096782\",\n            \"wheelbaseMM\": 2604\n        },\n        \"adverts\": {\n            \"forecourtPrice\": {\n                \"amountGBP\": 15777\n            },\n            \"vatScheme\": \"VAT Qualifying\",\n            \"purchasePrice\": {},\n            \"preparationCosts\": {},\n            \"stockInValue\": {},\n            \"retailAdverts\": {\n                \"price\": {\n                    \"amountGBP\": 15777\n                },\n                \"totalPrice\": {\n                    \"amountGBP\": 15777,\n                    \"amountGBX\": 1577700\n                },\n                \"suppliedPrice\": {\n                    \"amountGBP\": 15777,\n                    \"amountGBX\": 1577700\n                },\n                \"manufacturerRRP\": {},\n                \"vatExcluded\": false,\n                \"adminFee\": {},\n                \"adminFeeOverride\": {},\n                \"attentionGrabber\": \"3 Stamp full History Auto\",\n                \"advertiserAdvert\": {\n                    \"status\": \"PUBLISHED\"\n                },\n                \"locatorAdvert\": {\n                    \"status\": \"NOT_PUBLISHED\"\n                },\n                \"exportAdvert\": {\n                    \"status\": \"NOT_PUBLISHED\"\n                },\n                \"profileAdvert\": {\n                    \"status\": \"NOT_PUBLISHED\"\n                },\n                \"autotraderAdvert\": {\n                    \"status\": \"PUBLISHED\"\n                },\n                \"displayOptions\": {\n                    \"excludeBodyCondition\": false,\n                    \"excludeInteriorDetails\": false,\n                    \"excludeMot\": false,\n                    \"excludePreviousOwners\": false,\n                    \"excludeStrapline\": false,\n                    \"excludeTyreCondition\": false,\n                    \"excludeWarranty\": false\n                },\n                \"priceIndicatorRating\": \"GOOD\",\n                \"financeOffers\": {\n                    \"headlineOffer\": {\n                        \"monthlyPayment\": {},\n                        \"lenderDeposit\": {},\n                        \"advertiserDeposit\": {},\n                        \"consumerDeposit\": {},\n                        \"totalAmountOfCredit\": {},\n                        \"totalChargesPayable\": {},\n                        \"totalAmountPayable\": {},\n                        \"optionalFinalPayment\": {},\n                        \"optionToPurchaseFee\": {}\n                    }\n                }\n            },\n            \"tradeAdverts\": {\n                \"dealerAuctionAdvert\": {\n                    \"status\": \"EXPIRED\"\n                }\n            },\n            \"manufacturerApproved\": true,\n            \"soldPrice\": {},\n            \"priceOnApplication\": false,\n            \"twelveMonthsMot\": false\n        },\n        \"media\": {\n            \"images\": [],\n            \"video\": {},\n            \"spin\": {}\n        },\n        \"features\": [\n            {\n                \"name\": \"12V Socket - Rear\",\n                \"type\": \"Standard\",\n                \"standardName\": \"12V Socket - Rear\",\n                \"category\": \"Audio and Communications\"\n            },\n            {\n                \"name\": \"17in Alloy Wheels - Origami - Diamond Cut\",\n                \"type\": \"Standard\",\n                \"standardName\": \"17in Alloy Wheels - Origami - Diamond Cut\",\n                \"category\": \"Exterior\"\n            },\n            {\n                \"name\": \"3D Effect Rear Lights\",\n                \"type\": \"Standard\",\n                \"standardName\": \"3D Effect Rear Lights\",\n                \"category\": \"Exterior\"\n            },\n            {\n                \"name\": \"ABS with Electronic Brakeforce Distribution and Emergency Braking Assistance\",\n                \"type\": \"Standard\",\n                \"standardName\": \"ABS with Electronic Brakeforce Distribution and Emergency Braking Assistance\",\n                \"category\": \"Safety and Security\"\n            },\n            {\n                \"name\": \"Active Safety Brake - Forward Collision Alert\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Active Safety Brake - Forward Collision Alert\",\n                \"category\": \"Safety and Security\"\n            },\n            {\n                \"name\": \"Airbag - Front Passenger\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Airbag - Front Passenger\",\n                \"category\": \"Safety and Security\"\n            },\n            {\n                \"name\": \"Airbags - Driver\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Airbags - Driver\",\n                \"category\": \"Safety and Security\"\n            },\n            {\n                \"name\": \"Airbags - Front Curtain and Lateral\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Airbags - Front Curtain and Lateral\",\n                \"category\": \"Safety and Security\"\n            },\n            {\n                \"name\": \"Automatic Air Conditioning\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Automatic Air Conditioning\",\n                \"category\": \"Interior\"\n            },\n            {\n                \"name\": \"Automatic Door Locking When Moving Off\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Automatic Door Locking When Moving Off\",\n                \"category\": \"Safety and Security\"\n            },\n            {\n                \"name\": \"Automatic Illumination of Hazard Lights Upon Hard Deceleration\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Automatic Illumination of Hazard Lights Upon Hard Deceleration\",\n                \"category\": \"Safety and Security\"\n            },\n            {\n                \"name\": \"Automatic Lights and Windscreen Wipers\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Automatic Lights and Windscreen Wipers\",\n                \"category\": \"Illumination\"\n            },\n            {\n                \"name\": \"Automatic Locking of the Vehicle\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Automatic Locking of the Vehicle\",\n                \"category\": \"Safety and Security\"\n            },\n            {\n                \"name\": \"Black Roof Bars\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Black Roof Bars\",\n                \"category\": \"Exterior\"\n            },\n            {\n                \"name\": \"Body Colour Painted Door Handles\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Body Colour Painted Door Handles\",\n                \"category\": \"Exterior\"\n            },\n            {\n                \"name\": \"Boot Light\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Boot Light\",\n                \"category\": \"Interior\"\n            },\n            {\n                \"name\": \"Bumpers - Body Coloured Front and Rear\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Bumpers - Body Coloured Front and Rear\",\n                \"category\": \"Exterior\"\n            },\n            {\n                \"name\": \"Central Adjustable Armrest on Drivers Seat\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Central Adjustable Armrest on Drivers Seat\",\n                \"category\": \"Interior\"\n            },\n            {\n                \"name\": \"Centre Console - Closed Storage and Chrome Insert\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Centre Console - Closed Storage and Chrome Insert\",\n                \"category\": \"Interior\"\n            },\n            {\n                \"name\": \"Child Safety Locks\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Child Safety Locks\",\n                \"category\": \"Safety and Security\"\n            },\n            {\n                \"name\": \"Chrome Chevrons Citroen Front Grille\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Chrome Chevrons Citroen Front Grille\",\n                \"category\": \"Exterior\"\n            },\n            {\n                \"name\": \"Citroen Connect Box with Emergency and Assistance System\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Citroen Connect Box with Emergency and Assistance System\",\n                \"category\": \"Audio and Communications\"\n            },\n            {\n                \"name\": \"Citroen Connected Nav with 3D Navigation\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Citroen Connected Nav with 3D Navigation\",\n                \"category\": \"Audio and Communications\"\n            },\n            {\n                \"name\": \"Coffee Break Alert\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Coffee Break Alert\",\n                \"category\": \"Drivers Assistance\"\n            },\n            {\n                \"name\": \"Compressor with Puncture Repair Kit\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Compressor with Puncture Repair Kit\",\n                \"category\": \"Exterior\"\n            },\n            {\n                \"name\": \"Courtesy Reading Lights - Front and Rear\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Courtesy Reading Lights - Front and Rear\",\n                \"category\": \"Interior\"\n            },\n            {\n                \"name\": \"Cruise Control with Speed Limiter\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Cruise Control with Speed Limiter\",\n                \"category\": \"Drivers Assistance\"\n            },\n            {\n                \"name\": \"Door Mirrors - Colour Coded\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Door Mirrors - Colour Coded\",\n                \"category\": \"Exterior\"\n            },\n            {\n                \"name\": \"Door Mirrors - Electrically Adjustable-Heated-Folding\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Door Mirrors - Electrically Adjustable-Heated-Folding\",\n                \"category\": \"Exterior\"\n            },\n            {\n                \"name\": \"Driver Instrument Cluster - White Text LCD Display and White Needles and Chrome Decor\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Driver Instrument Cluster - White Text LCD Display and White Needles and Chrome Decor\",\n                \"category\": \"Interior\"\n            },\n            {\n                \"name\": \"Driver and Front Passenger Cup Holders\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Driver and Front Passenger Cup Holders\",\n                \"category\": \"Interior\"\n            },\n            {\n                \"name\": \"Drivers - Passengers and Rear Seats Unfastened Seat Belt Warning\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Drivers - Passengers and Rear Seats Unfastened Seat Belt Warning\",\n                \"category\": \"Safety and Security\"\n            },\n            {\n                \"name\": \"Drivers and Passengers Sunvisor with Courtesy Mirror\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Drivers and Passengers Sunvisor with Courtesy Mirror\",\n                \"category\": \"Interior\"\n            },\n            {\n                \"name\": \"Electrochrome Rear View Mirror\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Electrochrome Rear View Mirror\",\n                \"category\": \"Interior\"\n            },\n            {\n                \"name\": \"Electronic Stability Control - ESC\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Electronic Stability Control - ESC\",\n                \"category\": \"Safety and Security\"\n            },\n            {\n                \"name\": \"Flex Load - Pull Out Boot Floor\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Flex Load - Pull Out Boot Floor\",\n                \"category\": \"Interior\"\n            },\n            {\n                \"name\": \"Fog Lights Integrated into the Front Bumper\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Fog Lights Integrated into the Front Bumper\",\n                \"category\": \"Illumination\"\n            },\n            {\n                \"name\": \"Front Electric Windows - One Touch with Anti-Pinch\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Front Electric Windows - One Touch with Anti-Pinch\",\n                \"category\": \"Exterior\"\n            },\n            {\n                \"name\": \"Front Parking Sensors\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Front Parking Sensors\",\n                \"category\": \"Drivers Assistance\"\n            },\n            {\n                \"name\": \"Front Passenger Seat - Flat Folding\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Front Passenger Seat - Flat Folding\",\n                \"category\": \"Interior\"\n            },\n            {\n                \"name\": \"Front and Rear Door Storage\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Front and Rear Door Storage\",\n                \"category\": \"Interior\"\n            },\n            {\n                \"name\": \"Gloss Black Colour Pack\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Gloss Black Colour Pack\",\n                \"category\": \"Exterior\"\n            },\n            {\n                \"name\": \"Glovebox - Closeable Lid\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Glovebox - Closeable Lid\",\n                \"category\": \"Interior\"\n            },\n            {\n                \"name\": \"Height Adjustable 3-Point Pre-Tensioner Front Seat Belts\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Height Adjustable 3-Point Pre-Tensioner Front Seat Belts\",\n                \"category\": \"Safety and Security\"\n            },\n            {\n                \"name\": \"Height Adjustable Drivers Seat\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Height Adjustable Drivers Seat\",\n                \"category\": \"Interior\"\n            },\n            {\n                \"name\": \"Height and Reach Adjustable Steering Wheel\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Height and Reach Adjustable Steering Wheel\",\n                \"category\": \"Interior\"\n            },\n            {\n                \"name\": \"Hill Start Assist\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Hill Start Assist\",\n                \"category\": \"Safety and Security\"\n            },\n            {\n                \"name\": \"Immobiliser\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Immobiliser\",\n                \"category\": \"Safety and Security\"\n            },\n            {\n                \"name\": \"Integrated Rear Passenger Window Shades\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Integrated Rear Passenger Window Shades\",\n                \"category\": \"Interior\"\n            },\n            {\n                \"name\": \"Integrated Roof Spoiler\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Integrated Roof Spoiler\",\n                \"category\": \"Exterior\"\n            },\n            {\n                \"name\": \"Keyless Entry and Start\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Keyless Entry and Start\",\n                \"category\": \"Safety and Security\"\n            },\n            {\n                \"name\": \"LED Daytime Running Lights\",\n                \"type\": \"Standard\",\n                \"standardName\": \"LED Daytime Running Lights\",\n                \"category\": \"Illumination\"\n            },\n            {\n                \"name\": \"LED Headlights - ECO\",\n                \"type\": \"Standard\",\n                \"standardName\": \"LED Headlights - ECO\",\n                \"category\": \"Illumination\"\n            },\n            {\n                \"name\": \"Lane Departure Warning System\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Lane Departure Warning System\",\n                \"category\": \"Drivers Assistance\"\n            },\n            {\n                \"name\": \"Manual Handbrake with Chrome Insert\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Manual Handbrake with Chrome Insert\",\n                \"category\": \"Interior\"\n            },\n            {\n                \"name\": \"Monotone Horn\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Monotone Horn\",\n                \"category\": \"Safety and Security\"\n            },\n            {\n                \"name\": \"Outer Rear Seats with ISOFIX Mounting Points Including Top Tether\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Outer Rear Seats with ISOFIX Mounting Points Including Top Tether\",\n                \"category\": \"Safety and Security\"\n            },\n            {\n                \"name\": \"Outside Temperature Indicator\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Outside Temperature Indicator\",\n                \"category\": \"Drivers Assistance\"\n            },\n            {\n                \"name\": \"Passenger Compartment Headlight Adjustment\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Passenger Compartment Headlight Adjustment\",\n                \"category\": \"Interior\"\n            },\n            {\n                \"name\": \"Perimetric - Volumetric and Anti-Tilt Alarm\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Perimetric - Volumetric and Anti-Tilt Alarm\",\n                \"category\": \"Safety and Security\"\n            },\n            {\n                \"name\": \"Rear Electric Windows - One Touch with Anti-Pinch\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Rear Electric Windows - One Touch with Anti-Pinch\",\n                \"category\": \"Exterior\"\n            },\n            {\n                \"name\": \"Rear Parking Sensors\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Rear Parking Sensors\",\n                \"category\": \"Drivers Assistance\"\n            },\n            {\n                \"name\": \"Rear Seats - 3 Individually Adjustable Head Rests\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Rear Seats - 3 Individually Adjustable Head Rests\",\n                \"category\": \"Interior\"\n            },\n            {\n                \"name\": \"Rear Three Point Seatbelt x3\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Rear Three Point Seatbelt x3\",\n                \"category\": \"Safety and Security\"\n            },\n            {\n                \"name\": \"Remote Central Locking with Deadlocks\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Remote Central Locking with Deadlocks\",\n                \"category\": \"Safety and Security\"\n            },\n            {\n                \"name\": \"Satin Chrome Air Vent Surrounds\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Satin Chrome Air Vent Surrounds\",\n                \"category\": \"Interior\"\n            },\n            {\n                \"name\": \"Satin Chrome Interior Door Handles\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Satin Chrome Interior Door Handles\",\n                \"category\": \"Interior\"\n            },\n            {\n                \"name\": \"Seats - 60-40 Split Folding Rear - Sliding Rear Bench - Centre Armrest and Ski Flap\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Seats - 60-40 Split Folding Rear - Sliding Rear Bench - Centre Armrest and Ski Flap\",\n                \"category\": \"Interior\"\n            },\n            {\n                \"name\": \"Soft Touch Dashboard Facia\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Soft Touch Dashboard Facia\",\n                \"category\": \"Interior\"\n            },\n            {\n                \"name\": \"Steering Wheel Mounted Controls\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Steering Wheel Mounted Controls\",\n                \"category\": \"Interior\"\n            },\n            {\n                \"name\": \"Three 3-Point Rear Seatbelts\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Three 3-Point Rear Seatbelts\",\n                \"category\": \"Safety and Security\"\n            },\n            {\n                \"name\": \"Tinted Rear Windows and Rear Quarterpanel Glass\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Tinted Rear Windows and Rear Quarterpanel Glass\",\n                \"category\": \"Exterior\"\n            },\n            {\n                \"name\": \"Top Rear Vision Reversing Camera\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Top Rear Vision Reversing Camera\",\n                \"category\": \"Drivers Assistance\"\n            },\n            {\n                \"name\": \"Traffic Sign and Speed Limit Recognition and Recommendation\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Traffic Sign and Speed Limit Recognition and Recommendation\",\n                \"category\": \"Drivers Assistance\"\n            },\n            {\n                \"name\": \"Tyre Pressure Monitor\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Tyre Pressure Monitor\",\n                \"category\": \"Drivers Assistance\"\n            },\n            {\n                \"name\": \"Variable Power Assisted Steering\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Variable Power Assisted Steering\",\n                \"category\": \"Performance\"\n            },\n            {\n                \"name\": \"Vehicle Locater Function\",\n                \"type\": \"Standard\",\n                \"standardName\": \"Vehicle Locater Function\",\n                \"category\": \"Illumination\"\n            }\n        ],\n        \"highlights\": [\n            {\n                \"name\": \"Features Many Popular\"\n            },\n            {\n                \"name\": \"Mileage Low\"\n            },\n            {\n                \"name\": \"Number Owners One Previous\"\n            }\n        ],\n        \"check\": {\n            \"scrapped\": false,\n            \"stolen\": false,\n            \"imported\": false,\n            \"exported\": false,\n            \"privateFinance\": false,\n            \"tradeFinance\": true,\n            \"highRisk\": false,\n            \"mileageDiscrepancy\": false,\n            \"colourChanged\": false,\n            \"registrationChanged\": false,\n            \"previousOwners\": 1\n        }\n    },\n    \"stockEventSource\": \"OTHER\",\n    \"changedFields\": [\n        {\n            \"path\": \"/time\"\n        },\n        {\n            \"path\": \"/data/metadata/versionNumber\"\n        },\n        {\n            \"path\": \"/data/metadata/lastUpdated\"\n        },\n        {\n            \"path\": \"/data/check/privateFinance\"\n        },\n        {\n            \"path\": \"/data/check/tradeFinance\"\n        },\n        {\n            \"path\": \"/data/check/highRisk\"\n        },\n        {\n            \"path\": \"/data/check/mileageDiscrepancy\"\n        },\n        {\n            \"path\": \"/data/check/colourChanged\"\n        },\n        {\n            \"path\": \"/data/check/registrationChanged\"\n        },\n        {\n            \"path\": \"/data/check/previousOwners\"\n        }\n    ],\n    \"dealerId\": \"5761\",\n    \"messageId\": \"24b5e3e8-2f61-4337-ad33-88d8e99718a8\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localPartner}}/partner/inventory-mapping/:partnerName",
+					"host": [
+						"{{localPartner}}"
+					],
+					"path": [
+						"partner",
+						"inventory-mapping",
+						":partnerName"
+					],
+					"variable": [
+						{
+							"key": "partnerName",
+							"value": "AutoTrader"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl 'https://api.spyne.ai/partner' \\\n  -H 'sec-ch-ua-platform: \"macOS\"' \\\n  -H 'authorization: Bearer eyJhdXRoS2V5IjoiZmIyODNhNDItM2IxOS00ZTM2LTgxZTUtYTM5ZDIzNWFiMzgxIiwiZGV2aWNlSWQiOiI3NTZjOGE4ZTE4NmFkZWUzZDg5NzMwM2ZkYTY4ZGI2NCIsImVudGVycHJpc2VfaWQiOiJjYTNjOGU2ZTciLCJ0ZWFtX2lkIjoiODZmYzQwMmFkZCJ9' \\\n  -H 'Referer: https://console.spyne.ai/' \\\n  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36' \\\n  -H 'Accept: application/json, text/plain, */*' \\\n  -H 'sec-ch-ua: \"Chromium\";v=\"136\", \"Google Chrome\";v=\"136\", \"Not.A/Brand\";v=\"99\"' \\\n  -H 'sec-ch-ua-mobile: ?0'\n\n\n\n\n\n\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Input Workflow File Input V2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"lastModified\": \"2023-10-15T14:30:00Z\",\n    \"timestamp\": \"2023-10-15T14:35:00Z\",\n    \"filename\": \"File_by_rahul_rana.csv\",\n    \"folderName\": \"TEST\",\n    \"version\": null,\n    \"bucket\": \"spyne-uat\",\n    \"key\": \"TEST/File_by_rahul_rana.csv\"\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localPartner}}/partner/input-workflow/file-input",
+					"host": [
+						"{{localPartner}}"
+					],
+					"path": [
+						"partner",
+						"input-workflow",
+						"file-input"
+					]
+				},
+				"description": "Generated from cURL: curl --location 'https://api.spyne.ai/partner/input-workflow/file-input' \\\n--header 'Content-Type: application/json' \\\n--data '{\n    \"lastModified\": \"2023-10-15T14:30:00Z\",\n    \"timestamp\": \"2023-10-15T14:35:00Z\",\n    \"filename\": \"MPTESTED.csv\",\n    \"folderName\": \"VAuto\",\n    \"version\": \"1234\",\n    \"bucket\": \"prod-spyne-vsftp-storage\",\n    \"key\": \"VAuto/MPTESTED.csv\"\n  }'"
+			},
+			"response": []
+		},
+		{
+			"name": "Input Workflow File Input V1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"lastModified\": \"2023-10-15T14:30:00Z\",\n    \"timestamp\": \"2023-10-15T14:35:00Z\",\n    \"filename\": \"DOTEST.csv\",\n    \"folderName\": \"VAuto\",\n    \"version\": null,\n    \"bucket\": \"spyne-stag\",\n    \"key\": \"VAuto/DOTEST.csv\"\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/partner/input-workflow/file-input",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"partner",
+						"input-workflow",
+						"file-input"
+					]
+				},
+				"description": "Generated from cURL: curl --location 'https://api.spyne.ai/partner/input-workflow/file-input' \\\n--header 'Content-Type: application/json' \\\n--data '{\n    \"lastModified\": \"2023-10-15T14:30:00Z\",\n    \"timestamp\": \"2023-10-15T14:35:00Z\",\n    \"filename\": \"MPTESTED.csv\",\n    \"folderName\": \"VAuto\",\n    \"version\": \"1234\",\n    \"bucket\": \"prod-spyne-vsftp-storage\",\n    \"key\": \"VAuto/MPTESTED.csv\"\n  }'"
+			},
+			"response": []
+		},
+		{
+			"name": "Process Input CSV (V1)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"lastModified\": \"2023-10-15T14:30:00Z\",\n    \"timestamp\": \"2023-10-15T14:35:00Z\",\n    \"filename\": \"MPTESTED.csv\",\n    \"folderName\": \"VAuto\",\n    \"version\": \"1234\",\n    \"bucket\": \"prod-spyne-vsftp-storage\",\n    \"key\": \"VAuto/MPTESTED.csv\"\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/partner/process-input-csv",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"partner",
+						"process-input-csv"
+					]
+				},
+				"description": "Generated from cURL: curl --location 'https://api.spyne.ai/partner/input-workflow/file-input' \\\n--header 'Content-Type: application/json' \\\n--data '{\n    \"lastModified\": \"2023-10-15T14:30:00Z\",\n    \"timestamp\": \"2023-10-15T14:35:00Z\",\n    \"filename\": \"MPTESTED.csv\",\n    \"folderName\": \"VAuto\",\n    \"version\": \"1234\",\n    \"bucket\": \"prod-spyne-vsftp-storage\",\n    \"key\": \"VAuto/MPTESTED.csv\"\n  }'"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Sku Status (FTP)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"push_via_ftp_skus\": [\n        {\n            \"sku_name\": \"2HGFC2F60KH525536\",\n            \"sku_id\": \"cb0633a2426c4595a546e699aaabacdf\",\n            \"enterprise_id\": \"bb63009cf\",\n            \"team_id\": \"2d795c40e\",\n            \"input_urls\": [\n                \"https://spyne-media.s3.amazonaws.com/2025-08-05/3bb4fd08-91e8-4533-a820-5605a4b3c4b7.jpeg\",\n                \"https://spyne-media.s3.amazonaws.com/2025-08-05/8794218f-7b3c-4ade-8529-27e6ee904b6c.jpeg\",\n                \"https://spyne-media.s3.amazonaws.com/2025-08-05/3c171ef1-87b9-4614-9b84-ad480adaa44b.jpeg\",\n                \"https://spyne-media.s3.amazonaws.com/2025-08-05/0eba3979-9ed4-475f-9d32-d45fe3f998cc.jpeg\",\n                \"https://spyne-media.s3.amazonaws.com/2025-08-05/59d1a3bd-5278-4167-a048-6f4665d7b399.jpeg\",\n                \"https://spyne-media.s3.amazonaws.com/2025-08-05/a31fa6db-68b7-4e33-b5f1-75ad72f02616.jpeg\"\n            ],\n            \"output_urls\": [\n                \"https://spyne-media.s3.amazonaws.com/2025-08-05/car_replace_bg_d079eb48-a439-4d3e-ba52-db369dc2dd93.jpg\",\n                \"https://spyne-media.s3.amazonaws.com/2025-08-05/car_replace_bg_1c17e324-2cb2-461a-b036-b54c51ad6f45.jpg\",\n                \"https://spyne-media.s3.amazonaws.com/2025-08-05/car_replace_bg_da780d71-f75b-4cd8-81bd-c5b33a77dde6.jpg\",\n                \"https://spyne-media.s3.amazonaws.com/2025-08-05/car_replace_bg_01a34601-1f1b-4dd2-a44e-1b71109f13a6.jpg\",\n                \"https://spyne-media.s3.amazonaws.com/2025-08-05/car_replace_bg_0c472e03-8aab-4dcc-a9bb-adfe79deea04.jpg\",\n                \"https://spyne-media.s3.amazonaws.com/2025-08-05/car_replace_bg_f1f95340-b0d5-4ecf-a869-f3b1151a0a66.jpg\"\n            ],\n            \"status\": \"DONE\",\n            \"image_count\": 0,\n            \"qc_status\": \"qc_done\",\n            \"source\": \"FTP\",\n            \"image_name\": [\n                \"1388810698\",\n                \"1388810708\",\n                \"1388916568\",\n                \"1388916578\",\n                \"1388916598\",\n                \"1388916608\"\n            ]\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localPartner}}/partner/development/update-sku-status",
+					"host": [
+						"{{localPartner}}"
+					],
+					"path": [
+						"partner",
+						"development",
+						"update-sku-status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Generate Output CSV File V1",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Stock Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localPartner}}/partner/rooftop/:vin/stockId",
+					"host": [
+						"{{localPartner}}"
+					],
+					"path": [
+						"partner",
+						"rooftop",
+						":vin",
+						"stockId"
+					],
+					"variable": [
+						{
+							"key": "vin",
+							"value": "3VWSG71K15M608001"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
